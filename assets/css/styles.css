@@ -1,0 +1,411 @@
+:root {
+  font-size: 62.5%;
+  --background: #f8f3ea;
+  --font-color: black;
+  --brown-background: #daae87;
+  --dark-brown-background: #cf8d52;
+  --light-brown-background: #d6c0b3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-padding-top: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+hr {
+  border: 1.5px solid var(--dark-brown-background);
+  opacity: 0.4;
+}
+
+.title {
+  padding: 20px 0;
+}
+
+.container {
+  font-size: 1.6em;
+  background-color: var(--background);
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.container::before {
+  content: " ";
+  position: absolute;
+  top: 20px;
+  right: -70px;
+  background-image: url("/assets/icons/flower.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 225px;
+  height: 225px;
+}
+
+.container::after {
+  content: " ";
+  position: absolute;
+  background-image: url("/assets/icons/bubble.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 225px;
+  height: 225px;
+  top: 20px;
+  left: 100px;
+  transform: rotateY(180deg);
+  transform: translateY(200px);
+  transform: translateX(-200px);
+}
+
+/* HEADER SYTLING */
+#header {
+  position: sticky;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* min-height: 10vh; */
+  background-color: var(--background);
+  /* border-bottom: 1px solid; */
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.25);
+  font-family: "Poppins", Roboto, "Open Sans", "Helvetica Neue", sans-serif,
+    Helvetica;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 0 30px;
+  z-index: 2;
+  /* margin-bottom: 10px; */
+}
+
+#header ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+.cat-nav {
+  display: flex;
+  align-items: center;
+}
+#header ul li:not(#login, .cat-recipe) {
+  box-shadow: 0.5px 0.5px 1px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 25px;
+  padding: 8px 14px;
+}
+#header ul li:hover:not(#login, .cat-recipe) {
+  background-color: var(--brown-background);
+}
+#header ul li:active:not(#login, .cat-recipe) {
+  background-color: var(--dark-brown-background);
+}
+
+.cat-option {
+  /* width: 200px; */
+  /* height: 300px; */
+  background-color: #cf8d52;
+  position: absolute;
+  top: 70px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+  /* right: 30vw;
+  top: 10vh; */
+}
+.cat-option ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.cat-recipe {
+  width: 100%;
+}
+.cat-recipe li {
+  width: 100%;
+}
+.cat-option ul li {
+  border-radius: 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+.cat-option ul li a {
+  padding: 10px;
+  border: 1px solid blue;
+  width: 100%;
+  /* width: 1vw; */
+}
+
+.logo {
+  padding-left: 10px;
+}
+
+.intro {
+  min-height: 20vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 5px;
+  position: relative;
+  z-index: 1;
+  max-height: 35vh;
+  /* margin: 30px 0 20px 0; */
+  padding-top: 40px; /* Adjust this value to match the height of your header */
+  /* margin-top: -50px; */
+}
+
+.intro-text {
+  max-width: 80%;
+  font-family: "Sour Gummy", "Open Sans";
+  font-size: 2rem;
+}
+
+.left-side-intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 15px;
+}
+.right-side-intro {
+  max-width: 90%;
+}
+
+h1.title {
+  font-family: "Dancing Script";
+  font-size: 3.8rem;
+  font-weight: 700;
+}
+
+.flower {
+  position: absolute;
+  right: -75px;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+/* Main Styling */
+
+main {
+  font-family: Roboto, "Open Sans", "Helvetica Neue", sans-serif, Helvetica;
+}
+
+.trending-recipes {
+  /* border: 2px solid #cf8d52; */
+  /* background-color: #cf8d52; */
+  text-align: center;
+  width: 100vw;
+}
+
+.recipes-container {
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  /* gap: 30px; */
+  padding: 0 15px;
+}
+
+.recipe {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  /* position: relative; */
+}
+.card-title {
+  font-weight: 600;
+  font-size: 2rem;
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* padding-left: 40px; */
+  /* position: absolute;
+  left: 0; */
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 50vh;
+  /* border: 1px solid black; */
+  margin: 10px;
+  max-width: 700px;
+  max-height: 500px;
+  position: relative;
+}
+.card {
+  border: 1px solid black;
+  flex-basis: 100%;
+  height: 100%;
+  width: 100%;
+}
+
+.card-container > .card:first-child {
+  border-right: none;
+}
+
+.card-image {
+  border-bottom: 1px solid black;
+  height: 80%;
+}
+
+.card-description {
+  height: 20%;
+}
+
+/* About Us Section Sytling */
+
+section.about-us {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 40px 40px;
+  margin-top: 25px;
+  justify-content: space-evenly;
+  align-items: center;
+  border-top: 2px solid var(--brown-background);
+  /* height: 100vh; */
+  position: relative;
+}
+
+section.about-us .title {
+  font-family: "Dancing Script";
+  font-size: 3.8rem;
+  font-weight: 700;
+  width: 30;
+  border: 5px dotted var(--dark-brown-background);
+  border-radius: 40px 0 40px 0;
+  padding: 20px;
+  /* background-image: url("/assets/icons/cloud.svg");
+  background-repeat: no-repeat;
+  background-size: 200px 200px; */
+}
+section.about-us #cloud {
+  position: absolute;
+  right: 80px;
+  width: 270px;
+}
+
+.about-us-para {
+  width: 70%;
+  max-width: 80%;
+  font-family: "Sour Gummy", "Open Sans";
+  font-size: 2rem;
+  /* letter-spacing: 2px; */
+}
+
+/* FOOTER STYLING */
+
+footer {
+  width: 100vw;
+  min-height: 10vh;
+  /* background-color: var(--brown-background); */
+  padding: 40px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  font-family: "Poppins", Roboto, "Open Sans", "Helvetica Neue", sans-serif,
+    Helvetica;
+  font-weight: 600;
+  border-top: 1px solid var(--dark-brown-background);
+}
+.footer-text {
+  font-size: 2rem;
+  z-index: 2;
+  padding-left: 60px;
+  color: var(--dark-brown-background);
+  font-family: "Sour Gummy", "Open Sans";
+}
+
+.footer-contact ul {
+  font-size: 1.2rem;
+  list-style-type: none;
+  display: flex;
+  column-gap: 15px;
+}
+.footer-contact ul li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+}
+.footer-form {
+  color: var(--dark-brown-background);
+  font-family: "Sour Gummy", "Open Sans";
+  display: flex;
+  flex-direction: column;
+}
+
+::placeholder {
+  color: var(--background);
+}
+
+.footer-form input[type="submit"] {
+  background-color: var(--dark-brown-background);
+  padding: 5px 7px;
+  border-radius: 15px;
+  border: none;
+  color: var(--background);
+}
+.footer-form input[type="email"] {
+  background-color: var(--dark-brown-background);
+  padding: 8px 10px;
+  color: var(--background);
+  border-radius: 15px;
+  border: none;
+  color: var(--background);
+}
+
+.footer-form input[type="submit"]:hover {
+  background-color: var(--brown-background);
+}
+#weed {
+  position: absolute;
+  left: -40px;
+  width: 150px;
+  height: 150px;
+}
+
+@media only screen and (max-width: 1150px) {
+  section.about-us {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .intro {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-height: 40vh;
+    row-gap: 15px;
+  }
+
+  .right-side-intro,
+  .left-side-intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+  }
+}
