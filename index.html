@@ -3,26 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bite & Spice Recipes</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_arrow_down" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <h1>Bite And Spice
-    </h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates dignissimos veniam veritatis doloremque
-        voluptas officiis quam, quos, officia itaque hic recusandae, nostrum aut natus dolores explicabo corporis
-        accusamus distinctio dolor.
-        Deserunt perferendis rerum, dolor vero aliquam, adipisci ut ad eum dolores, animi molestiae tempora maxime
-        repudiandae alias amet magnam culpa ipsam odio nisi minima laboriosam inventore totam! Similique, molestias
-        excepturi.
-        Reiciendis quaerat dolor quam eaque illum? Alias, eveniet. Dolore sit aut voluptatum dicta tempora voluptatibus
-        nemo dolorem dolores quod quia, officiis perspiciatis? Modi, corporis autem amet laborum ratione mollitia
-        delectus.
-        Esse voluptatum ex ad facere impedit accusamus iusto neque ullam adipisci nam, consequatur placeat quidem natus
-        temporibus exercitationem alias consectetur assumenda soluta praesentium dolorem voluptates fugit. Dicta,
-        aspernatur odio! Maiores!
-        Mollitia tempore officia tenetur est, iure vitae maxime magni ducimus neque dignissimos facilis ratione!
-        Laudantium sunt sapiente dolore, praesentium facilis omnis unde blanditiis, nesciunt beatae aspernatur mollitia,
-        cum inventore voluptatum?</p>
+    <header id="header">
+        <div class="left-side-header">
+            <img src="assets/icons/logo.svg" alt="Logo Bite & Spice" width="90px" height="90px" class="logo">
+        </div>
+        <div class="right-side-header">
+            <nav class="nav-bar">
+                <ul>
+                    <li>
+                        <a href="/index.html">
+                            <strong>HOME</strong>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about-us">ABOUT US</a>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">
+                            CATEGORY </button>
+                        <div class="dropdown-content">
+                            <a href=" /content/breakfast.html">BREAKFAST</a>
+                            <a href="/content/lunch.html">LUNCH</a>
+                            <a href="/content/dinner.html">DINNER</a>
+                            <a href="/content/dessert.html">DESSERTS</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#footer">
+                            CONTACT
+                        </a>
+                    </li>
+                    <li id="login">
+                        <a href="">
+                            <i class="user-icon fa-solid fa-circle-user"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
 
+    </header>
+    <div class="container">
+        <main>
+            <section class="intro">
+                <div class="left-side-intro">
+                    <img src="/assets/icons/plate.svg" alt="" width="80px" height="80px">
+                    <h1 class="title">BITE & SPICE</h1>
+                </div>
+                <div class="right-side-intro">
+                    <p class="intro-text">Bite & Spice is here to make cooking simple, affordable, and fun for beginners
+                        and students. We
+                        offer easy recipes and
+                        helpful tips, so you can enjoy delicious, budget-friendly meals without stress. Let’s cook
+                        together!</p>
+                </div>
+                <!-- <img src="/assets/icons/flower.svg" width="225px" height="225px" class="flower"> -->
+            </section>
+            <!-- <hr> -->
+            <section class="trending-recipes">
+                <h2 class="title">TRENDING RECIPES</h2>
+                <div class="recipes-container">
+                    <div class="recipe">
+                        <div class="card-title">
+                            <p>BREAKFAST</p>
+                        </div>
+                        <div class="card-container breakfast-recipes">
+                            <div class="card">
+                                <div class="card-image"><img src="https://picsum.photos/600/600" alt="Recipe 1"></div>
+                                <div class="card-description"></div>
+                            </div>
+                            <div class="card">
+                                <div class="card-image"><img src="https://picsum.photos/600/600" alt="Recipe 2"></div>
+                                <div class="card-description"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recipe">
+                        <div class="card-title">
+                            <p>LUNCH</p>
+                        </div>
+                        <div class="card-container breakfast-recipes">
+                            <div class="card">
+                                <div class="card-image"><img src="https://picsum.photos/600/600" alt="Recipe 1"></div>
+                                <div class="card-description"></div>
+                            </div>
+                            <div class="card">
+                                <div class="card-image"><img src="https://picsum.photos/600/600" alt="Recipe 2"></div>
+                                <div class="card-description"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recipe">
+                        <div class="card-title">
+                            <p>DINNER</p>
+                        </div>
+                        <div class="card-container breakfast-recipes">
+                            <div class="card">
+                                <div class="card-image"><img src="https://picsum.photos/600/600" alt="Recipe 1"></div>
+                                <div class="card-description"></div>
+                            </div>
+                            <div class="card">
+                                <div class="card-image"><img src="https://picsum.photos/600/600" alt="Recipe 2"></div>
+                                <div class="card-description"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recipe">
+                        <div class="card-title">
+                            <p>DESSERTS</p>
+                        </div>
+                        <div class="card-container breakfast-recipes">
+                            <div class="card">
+                                <div class="card-image"><img src="https://picsum.photos/600/600" alt="Recipe 1"></div>
+                                <div class="card-description"></div>
+                            </div>
+                            <div class="card">
+                                <div class="card-image"><img src="https://picsum.photos/600/600" alt="Recipe 2"></div>
+                                <div class="card-description"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="about-us" id="about-us">
+                <!-- <img src="/assets/icons/cloud.svg" id="cloud"> -->
+                <div class="title">ABOUT US</div>
+                <div class="about-us-para">
+                    <p>Bite & Spice is a recipe hub designed for beginners, students, and anyone looking for simple,
+                        affordable cooking
+                        solutions. We believe that cooking at home should be easy, fun, and budget-friendly. Our mission
+                        is to inspire new cooks
+                        to embrace the kitchen and try new things, without spending a lot of money.
+
+                        Founded by <strong>Aiman Karami</strong>, Bite & Spice offers a collection of easy-to-follow
+                        recipes and kitchen
+                        tips that anyone can
+                        master. From quick meals for busy days to affordable ingredients, we’ve got everything you need
+                        to get cooking.
+
+                        Join us in the kitchen, and let’s make every meal a tasty adventure!</p>
+                </div>
+            </section>
+        </main>
+        <footer id="footer">
+            <img src="/assets/icons/weed.svg" id="weed">
+            <div class="footer-text">
+                <p>GET IN TOUCH WITH US!</p>
+            </div>
+            <div class="footer-contact">
+                <ul>
+                    <li><img src="/assets/icons/location.svg" alt="location icon" width="30px" height="30px">SINI SANA
+                        STREET</li>
+                    <li><img src="/assets/icons/contact.svg" alt="contact icon" width="30px" height="30px">012-345 6789
+                    </li>
+                    <li><img src="/assets/icons/email.svg" alt="email icon" width="30px" height="30px"><a
+                            href="mailto:bitenspice@gmail.com">bitenspice@gmail.com</a></li>
+                </ul>
+            </div>
+            <div class="footer-form">
+                <form action="/submit.php" method="post"></form>
+                <p>Subscribe to get our updates!</p>
+                <div>
+                    <input type="email" name="email" id="email" placeholder="Write your e-mail">
+                    <input type="submit" value="Submit">
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
