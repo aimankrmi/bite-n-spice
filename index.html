@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bite & Spice Recipes</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_arrow_down" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,10 +25,13 @@
             <img src="assets/icons/logo.svg" alt="Logo Bite & Spice" width="90px" height="90px" class="logo">
         </div>
         <div class="right-side-header">
-            <nav class="nav-bar">
+            <button class="toggler" id="toggler">
+                <i class="fa fa-bars"></i>
+            </button>
+            <nav class="nav-bar" id="nav-bar">
                 <ul>
                     <li>
-                        <a href="/index.html">
+                        <a href="#">
                             <strong>HOME</strong>
                         </a>
                     </li>
@@ -39,11 +42,23 @@
                         <button class="dropbtn">
                             CATEGORY </button>
                         <div class="dropdown-content">
-                            <a href=" /content/breakfast.html">BREAKFAST</a>
-                            <a href="/content/lunch.html">LUNCH</a>
-                            <a href="/content/dinner.html">DINNER</a>
-                            <a href="/content/dessert.html">DESSERTS</a>
+                            <a href="content/breakfast.html">BREAKFAST</a>
+                            <a href="content/lunch.html">LUNCH</a>
+                            <a href="content/dinner.html">DINNER</a>
+                            <a href="content/dessert.html">DESSERTS</a>
                         </div>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="content/breakfast.html">BREAKFAST</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="content/lunch.html">LUNCH</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="content/dinner.html">DINNER</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="content/dessert.html">DESSERTS</a>
                     </li>
                     <li>
                         <a href="#footer">
@@ -58,13 +73,12 @@
                 </ul>
             </nav>
         </div>
-
     </header>
     <div class="container">
         <main>
             <section class="intro">
                 <div class="left-side-intro">
-                    <img src="/assets/icons/plate.svg" alt="" width="80px" height="80px">
+                    <img src="assets/icons/plate.svg" alt="" width="80px" height="80px">
                     <h1 class="title">BITE & SPICE</h1>
                 </div>
                 <div class="right-side-intro">
@@ -163,27 +177,40 @@
             </section>
         </main>
         <footer id="footer">
-            <img src="/assets/icons/weed.svg" id="weed">
-            <div class="footer-text">
-                <p>GET IN TOUCH WITH US!</p>
-            </div>
-            <div class="footer-contact">
-                <ul>
-                    <li><img src="/assets/icons/location.svg" alt="location icon" width="30px" height="30px">SINI SANA
-                        STREET</li>
-                    <li><img src="/assets/icons/contact.svg" alt="contact icon" width="30px" height="30px">012-345 6789
-                    </li>
-                    <li><img src="/assets/icons/email.svg" alt="email icon" width="30px" height="30px"><a
-                            href="mailto:bitenspice@gmail.com">bitenspice@gmail.com</a></li>
-                </ul>
-            </div>
-            <div class="footer-form">
-                <form action="/submit.php" method="post"></form>
-                <p>Subscribe to get our updates!</p>
-                <div>
-                    <input type="email" name="email" id="email" placeholder="Write your e-mail">
-                    <input type="submit" value="Submit">
+            <div class="footer-top">
+                <img src="assets/icons/weed.svg" id="weed">
+                <div class="footer-text">
+                    <p>GET IN TOUCH WITH US!</p>
                 </div>
+                <div class="footer-contact">
+                    <ul>
+                        <li>
+                            <img class="footer-link" src="assets/icons/location.svg" alt="location icon" width="30px"
+                                height="30px">
+                            <span>SINI SANA STREET</span>
+                        </li>
+                        <li>
+                            <a href="https://api.whatsapp.com/send?phone=60123456789"><img class="footer-link"
+                                    src="assets/icons/contact.svg" alt="contact icon" width="30px" height="30px"></a>
+                            <span>012-345 6789</span>
+                        </li>
+                        <li>
+                            <img class="footer-link" src="assets/icons/email.svg" alt="email icon" width="30px"
+                                height="30px">
+                            <span><a href="mailto:bitenspice@gmail.com">bitenspice@gmail.com</a></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-form">
+                    <p>Subscribe to get our updates!</p>
+                    <form action="/submit.php" method="post">
+                        <input type="email" name="email" placeholder="Enter your email" required>
+                        <input type="submit" value="Subscribe">
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Bite & Spice. All rights reserved.</p>
             </div>
         </footer>
     </div>
