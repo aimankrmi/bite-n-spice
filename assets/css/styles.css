@@ -43,6 +43,10 @@ hr {
   position: relative;
 }
 
+.container-fluid {
+  background-color: var(--background);
+}
+
 #header {
   position: sticky;
   top: 0;
@@ -286,6 +290,7 @@ section.about-us .title {
 }
 
 footer {
+  background-color: var(--background);
   width: 100vw;
   min-height: 10vh;
   padding: 20px 20px;
@@ -580,3 +585,14 @@ footer {
     font-size: 1.6rem;
   }
 }
+
+/* Main Recipe Page */
+
+.recipe-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+/* End Main Recipe Page */
