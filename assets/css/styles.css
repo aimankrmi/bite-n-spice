@@ -587,7 +587,10 @@ footer {
 }
 
 /* Main Recipe Page */
-
+.recipe-img-container {
+  max-width: 640px;
+  max-height: 800px;
+}
 .recipe-img {
   display: flex;
   justify-content: center;
