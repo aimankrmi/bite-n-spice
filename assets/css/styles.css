@@ -59,9 +59,11 @@ hr {
   padding: 0 30px;
   z-index: 2;
 }
+
 #header .dropdown-item {
   display: none;
 }
+
 #header ul {
   list-style-type: none;
   display: flex;
@@ -242,7 +244,7 @@ main {
   width: 100%;
 }
 
-.card-container > .card:first-child {
+.card-container>.card:first-child {
   border-right: 1px solid black;
 }
 
@@ -300,12 +302,14 @@ footer {
   font-weight: 600;
   border-top: 1px solid var(--dark-brown-background);
 }
+
 .footer-top {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .footer-text {
   font-size: 2rem;
   z-index: 2;
@@ -330,6 +334,7 @@ footer {
   column-gap: 5px;
   padding: 10px 0;
 }
+
 .footer-contact ul li img {
   margin-right: 10px;
 }
@@ -339,7 +344,8 @@ footer {
   font-family: "Sour Gummy", "Open Sans";
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center align the form elements */
+  align-items: center;
+  /* Center align the form elements */
 }
 
 .footer-form p {
@@ -351,7 +357,8 @@ footer {
   padding: 8px 10px;
   border-radius: 15px;
   border: none;
-  margin-right: 10px; /* Add some space between the input and button */
+  margin-right: 10px;
+  /* Add some space between the input and button */
   color: var(--font-color);
 }
 
@@ -372,12 +379,15 @@ footer {
   color: var(--background);
   cursor: pointer;
 }
+
 .footer-form input[type="submit"]:hover {
   background-color: var(--brown-background);
 }
+
 ::placeholder {
   color: var(--background);
 }
+
 .footer-bottom {
   text-align: center;
   margin-top: 20px;
@@ -407,6 +417,7 @@ footer {
 .footer-form input[type="submit"]:hover {
   background-color: var(--brown-background);
 }
+
 .footer-copyright {
   text-align: center;
   margin-top: 20px;
@@ -476,10 +487,12 @@ footer {
   .card-image {
     width: 100%;
   }
+
   .footer-form input[type="submit"] {
     margin-top: 5px;
   }
 }
+
 /* Adjust font size for tablets */
 @media only screen and (max-width: 1024px) {
   body {
@@ -493,6 +506,7 @@ footer {
     font-size: 1.8rem;
   }
 }
+
 @media screen and (max-width: 600px) {
   #header ul {
     flex-direction: column;
@@ -524,6 +538,7 @@ footer {
     text-align: center;
   }
 }
+
 #weed {
   position: absolute;
   left: -40px;
@@ -569,6 +584,7 @@ footer {
   #header .dropdown-item {
     display: block;
   }
+
   body {
     font-size: 12px;
   }
