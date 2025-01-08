@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Page</title>
+    <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Maharlika&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CategoryPageStyles.css">
+</head>
+
+<body>
+    <header id="header">
+        <div class="left-side-header">
+            <img src="assets/icons/logo.svg" alt="Logo Bite & Spice" width="90px" height="90px" class="logo">
+        </div>
+        <div class="right-side-header">
+            <button class="toggler" id="toggler">
+                <i class="fa fa-bars"></i>
+            </button>
+            <nav class="nav-bar" id="nav-bar">
+                <ul>
+                    <li><a href="index.html"><strong>HOME</strong></a></li>
+                    <li><a href="index.html #about-us">ABOUT US</a></li>
+                    <li class="dropdown">
+                        <button class="dropbtn">CATEGORY</button>
+                        <div class="dropdown-content">
+                            <a href="content/breakfast.html">BREAKFAST</a>
+                            <a href="content/lunch.html">LUNCH</a>
+                            <a href="CategoryPage.html">DINNER</a>
+                            <a href="content/dessert.html">DESSERTS</a>
+                        </div>
+                    </li>
+                    <li><a href="#footer">CONTACT</a></li>
+                    <li id="login"><a href=""><i class="user-icon fa-solid fa-circle-user"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        <section class="hero">
+            <img src="bubble.svg" alt="Bubbles" class="bubbles-image">
+            <img src="plate.png" alt="Plate" width="80px" height="80px" class="plate-image">
+            <div class="left-side-intro">
+                <h1>Dinner Recipes</h1>
+            </div>
+            <div class="right-side-intro">
+                <p class="intro-text">
+                    Bite & Spice is here to make cooking simple, affordable, and fun for beginners.
+                    What's for dinner? These are some of the most popular recipes on this site right now!
+                </p>
+            </div>
+            <img src="flower.svg" alt="Flowers" class="flowers-image">
+        </section>
+
+
+
+
+        <section class="search-container">
+            <input type="text" placeholder="Search Recipes" class="search-bar">
+            <button class="search-button">Search</button>
+        </section>
+
+        <section class="recipe-container">
+            <div class="recipe-card">
+                <img src="TeriyakiChickenBroccoli.jpg" alt="Teriyaki Chicken and Broccoli">
+                <p>Teriyaki Chicken and Broccoli</p>
+            </div>
+            <div class="recipe-card">
+                <img src="SpaghettiAglioeOlio.jpg" alt="Spaghetti Aglio e Olio">
+                <p>Spaghetti Aglio e Olio</p>
+            </div>
+            <div class="recipe-card">
+                <img src="ChickenTortilla.jpg" alt="Chicken Tortilla">
+                <p>Chicken Tortilla</p>
+            </div>
+            <div class="recipe-card">
+                <img src="Sate Ayam.jpg" alt="Thai Chicken Satay Skewers with Peanut Sauce">
+                <p>Chicken Satay with Peanut Sauce</p>
+            </div>
+            <div class="recipe-card">
+                <img src="Lamb Chops with Rosemary Gravy.jpg" alt="Lamb Chops with Rosemary Gravy">
+                <p>Lamb Chops with Rosemary Gravy</p>
+            </div>
+            <div class="recipe-card">
+                <img src="char kuey teow.jpg" alt="char kuey teow">
+                <p>Char Kuey Teow</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer">
+        <div class="footer-top">
+            <img src="assets/icons/weed.svg" id="weed">
+            <div class="footer-text">
+                <p>GET IN TOUCH WITH US!</p>
+            </div>
+            <div class="footer-contact">
+                <ul>
+                    <li>
+                        <img class="footer-link" src="assets/icons/location.svg" alt="location icon" width="30px"
+                            height="30px">
+                        <span>SINI SANA STREET</span>
+                    </li>
+                    <li>
+                        <a href="https://api.whatsapp.com/send?phone=60123456789">
+                            <img class="footer-link" src="assets/icons/contact.svg" alt="contact icon" width="30px"
+                                height="30px">
+                        </a>
+                        <span>012-345 6789</span>
+                    </li>
+                    <li>
+                        <img class="footer-link" src="assets/icons/email.svg" alt="email icon" width="30px"
+                            height="30px">
+                        <span><a href="mailto:bitenspice@gmail.com">bitenspice@gmail.com</a></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-form">
+                <p>Subscribe to get our updates!</p>
+                <form action="/submit.php" method="post">
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                    <input type="submit" value="Subscribe">
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Bite & Spice. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
