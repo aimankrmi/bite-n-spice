@@ -7,8 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
   toggler.addEventListener("click", function () {
     navBar.classList.toggle("active");
   });
-
-  changeHeaderBackground();
+  if (headerBackground) {
+    changeHeaderBackground();
+  }
 });
 
 let colorNow = 0;

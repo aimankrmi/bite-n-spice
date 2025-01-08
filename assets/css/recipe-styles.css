@@ -1,12 +1,26 @@
+hr {
+  margin: 0;
+}
+
+.recipe-img-container {
+  padding-top: 10px;
+  max-width: 640px;
+  max-height: 700px;
+}
+
+.recipe-img {
+  width: 100%;
+  width: 625px;
+  height: 600px;
+  max-height: 600px;
+  object-fit: cover;
+}
+
 .recipe-title {
   font-family: "DM Serif Text", serif;
   text-transform: uppercase;
   font-size: 36px;
-  color: var(--dark-brown-background);
-}
-
-.recipe-info-container {
-  padding: 0 20px;
+  color: var(--dark-brown-text);
 }
 
 .recipe-info-container .subtitle {
@@ -15,6 +29,11 @@
   color: black;
   /* font-size: 24px; */
   /* color: var(--dark-brown-background); */
+}
+
+.left-side {
+  border-right: 2px solid var(--light-brown-background);
+  padding-left: 20px;
 }
 
 .ingredients {
@@ -26,35 +45,187 @@
   color: var(--dark-brown-title);
 }
 
-.step-instructions {
+.step-instructions,
+.instructions li {
   color: var(--dark-brown-text);
   font-size: 16px;
 }
 
+.capsule {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 50px;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.left-div-group,
+.right-div-group {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
+  color: var(--dark-brown-background);
+}
+
+.left-div-group {
+  border-right: 1px solid var(--dark-brown-background);
+}
+
+.left-div-group:hover,
+.right-div-group:hover {
+  transform: scale(1.05);
+}
+
+.review-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.review-input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid var(--dark-brown-background);
+  margin-right: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+  color: var(--dark-brown-background);
+  background-color: var(--background);
+}
+
+.review-input:focus {
+  outline: none;
+  background-color: var(--background);
+}
+
+.review-submit {
+  font-size: 1.4rem;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: none;
+  background-color: var(--dark-brown-background);
+  color: var(--background);
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+
+.review-submit:hover {
+  background-color: var(--brown-background);
+}
+
+.user-icon {
+  font-size: 3rem; /* Adjust the size as needed */
+  color: var(--dark-brown-background);
+}
+
+.user-comment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nutritional-facts {
+  color: var(--dark-brown-background);
+}
+
+.nutritional-facts span {
+  color: var(--dark-brown-text);
+}
+
+.nutrition-box {
+  border: 1px solid var(--dark-brown-title);
+  border-radius: 10px;
+}
+
+.tips-section {
+  color: var(--dark-brown-text);
+}
+.tips-title {
+  color: var(--dark-brown-title);
+  font-weight: 600;
+}
+
+#footer {
+  width: 100%;
+}
+.footer-contact span {
+  color: black;
+}
+
+.footer-contact a:hover {
+  color: black;
+}
+
 @media (max-width: 576px) {
   /* Extra small screens */
-  .ingredients,
-  .step-instructions {
+
+  .nutrition-box {
     font-size: 0.9rem;
+  }
+  .user-review {
+    margin-left: 1rem !important;
+  }
+  .user-icon {
+    padding-right: 10px !important;
+  }
+
+  .subtitle {
+    font-size: 1.8rem !important;
+  }
+
+  .capsule {
+    width: 90% !important;
+  }
+
+  .nutritition-row {
+    flex-direction: column !important;
   }
 }
 @media (min-width: 577px) and (max-width: 768px) {
   /* Small screens */
-  .ingredients,
-  .step-instructions {
-    font-size: 1rem;
+  /* .ingredients,
+  .step-instructions,
+  .nutrition-box,
+  .tips-desc {
+    font-size: 1rem !important;
+  } */
+  .nutrition-box {
+    font-size: 1.3rem !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* To convert the time cook capsule to vertical or direction column when the screen is small */
+  .inner-capsule {
+    flex-direction: column;
+  }
+  .left-div-group {
+    border-right: none;
+    border-bottom: 1px solid var(--dark-brown-background);
+  }
+  .left-div-group,
+  .right-div-group {
+    width: 100%;
   }
 }
 @media (min-width: 769px) and (max-width: 992px) {
   /* Medium screens */
-  .ingredients,
-  .step-instructions {
-    font-size: 1.2rem;
+  /* .ingredients,
+  .step-instructions,
+  .nutrition-box,
+  .tips-desc {
+    font-size: 1.2rem !important;
+  } */
+  .nutrition-box {
+    font-size: 1.3rem !important;
   }
 }
 @media (min-width: 993px) {
   /* Large screens */
-  .ingredients {
-    font-size: 1.4rem;
+  .nutrition-box {
+    font-size: 1.3rem !important;
   }
 }

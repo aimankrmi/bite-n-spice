@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In Page</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Maharlika&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/sign-in-styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <img src="../assets/images/FoodImage.jpg" class="food-image" alt="Food Image">
+        </div>
+
+        <div class="right">
+            <div class="flower"></div>
+            <div class="leaf"></div>
+            <div class="bubble-top"></div>
+            <div class="bubble-bottom-right">
+            </div>
+
+            <h1>Let's sign you in.</h1>
+            <p class="welcome-text">Hello, welcome back to your account</p>
+            <form action="#">
+                <input type="email" placeholder="Email Address" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Sign in now</button>
+            </form>
+            <p class="register-text">Don't have an account? <a href="sign-up.html">Register</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            // Prevent the default form submission behavior
+            event.preventDefault();
+
+            // Check if the form is valid
+            const email = document.getElementById('email');
+            const password = document.getElementById('password');
+
+            if (email.value && password.value) {
+                // Redirect to the homepage if form is valid
+                window.location.href = 'index.html';
+            } else {
+                // Show validation messages if form is invalid
+                if (!email.value) {
+                    email.setCustomValidity('Please fill in your email.');
+                }
+                if (!password.value) {
+                    password.setCustomValidity('Please fill in your password.');
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
