@@ -26,37 +26,17 @@
 
             <h1>Let's sign you in.</h1>
             <p class="welcome-text">Hello, welcome back to your account</p>
-            <form action="#">
-                <input type="email" placeholder="Email Address" required>
-                <input type="password" placeholder="Password" required>
+            <form id="login-form" action="#">
+                <input id="email" type="email" placeholder="Email Address" required>
+                <input id="password" type="password" placeholder="Password" required>
                 <button type="submit">Sign in now</button>
             </form>
             <p class="register-text">Don't have an account? <a href="sign-up.html">Register</a></p>
         </div>
     </div>
 
-    <script>
-        document.getElementById('loginForm').addEventListener('submit', function (event) {
-            // Prevent the default form submission behavior
-            event.preventDefault();
+    <script src="../assets/js/sign-in.js">
 
-            // Check if the form is valid
-            const email = document.getElementById('email');
-            const password = document.getElementById('password');
-
-            if (email.value && password.value) {
-                // Redirect to the homepage if form is valid
-                window.location.href = 'index.html';
-            } else {
-                // Show validation messages if form is invalid
-                if (!email.value) {
-                    email.setCustomValidity('Please fill in your email.');
-                }
-                if (!password.value) {
-                    password.setCustomValidity('Please fill in your password.');
-                }
-            }
-        });
     </script>
 
 </body>

@@ -1,0 +1,40 @@
+.nutrition-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.table-container {
+  width: 90%;
+  max-width: 800px;
+  overflow-x: auto; /* Enable horizontal scrolling on smaller screens */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-family: "Poppins", sans-serif;
+}
+th,
+td {
+  padding: 12px 15px;
+  text-align: center;
+  border: 1px solid var(--dark-brown-background);
+}
+
+th {
+  background-color: var(--light-brown-background);
+  color: var(--dark-brown-title);
+  font-weight: bold;
+}
+
+td {
+  background-color: var(--background);
+  color: var(--font-color);
+}
+
+tbody tr:nth-child(odd) td {
+  background-color: #f2f2f2; /* Slightly darker background for odd rows */
+}

@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Maharlika&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/sign-up-styles.css">
 </head>
 
@@ -19,13 +20,27 @@
             <div class="bubble-top"></div>
             <div class="bubble-bottom-right"></div>
             <div class="register-form-container">
-
                 <h1>Create Account</h1>
                 <p class="welcome-text">Fill in the details below to create your account</p>
-                <form action="#">
+                <form id="register-form" action="#">
                     <input type="text" placeholder="Username" required>
                     <input type="email" placeholder="Email Address" required>
                     <input type="password" placeholder="Password" required>
+
+                    <label for="dob" class="dob-label">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+
+                    <label for="gender" class="gender-label">Gender:</label>
+                    <div class="gender-selection">
+                        <label>
+                            <input type="radio" name="gender" value="male" required>
+                            Male
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="female" required>
+                            Female
+                        </label>
+                    </div>
                     <button type="submit">Join Now</button>
                 </form>
             </div>
@@ -34,7 +49,7 @@
             <img src="../assets/images/FoodImage.jpg" class="food-image" alt="Food Image">
         </div>
     </div>
-
+    <script src="../assets/js/sign-up.js"></script>
 </body>
 
 </html>

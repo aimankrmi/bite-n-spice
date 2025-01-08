@@ -1,162 +1,112 @@
 body {
-    margin: 0;
-    font-family: 'Playfair Display', serif;
-    background-color: #f8f3ea;
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  background-color: #f8f3ea;
 }
 
 .container {
-    display: flex;
-    height: 100vh;
+  display: flex;
+  height: 100vh;
 }
 
 .left {
-    flex: 1;
-    /* padding: 40px; */
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    border-right: 2px solid #bf895c;
-}
-
-.register-form-container {
-    width: 80%;
-    /* padding: 40px; */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-right: 2px solid #bf895c;
 }
 
 .right {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .food-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* Flower at the top right, beside the image */
-.flower {
-    position: absolute;
-    top: 0px;
-    /* Adjust vertical position */
-    right: 1px;
-    /* Adjust horizontal position */
-    width: 200px;
-    height: 200px;
-    background-image: url('flower.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    z-index: 1;
-}
-
-/* Leaf at the bottom left */
-.leaf {
-    position: absolute;
-    bottom: 0px;
-    /* Align at the bottom */
-    left: 0px;
-    /* Align at the left edge */
-    width: 180px;
-    height: 180px;
-    background-image: url('leaf.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    z-index: 1;
-}
-
-/* Bubble at the top left */
-.bubble-top {
-    position: absolute;
-    top: 0px;
-    /* Align at the top */
-    left: 0px;
-    /* Align at the left edge */
-    width: 180px;
-    height: 180px;
-    background-image: url('bubble.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    z-index: 1;
-}
-
-/* Bubble at the bottom right, centered */
-.bubble-bottom-right {
-    position: absolute;
-    bottom: 0px;
-    /* Align at the bottom */
-    right: 1px;
-    /* Adjust horizontal position */
-    width: 180px;
-    height: 180px;
-    background-image: url('bubble2.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    z-index: 1;
+.register-form-container {
+  width: 80%;
+  max-width: 400px;
 }
 
 h1 {
-    font-size: 2.5rem;
-    color: #723f18;
-    margin-bottom: 10px;
-    text-align: center;
+  font-size: 2.5rem;
+  color: #723f18;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 .welcome-text {
-    font-size: 1rem;
-    color: #723f18;
-    margin-bottom: 30px;
-    text-align: center;
+  font-size: 1rem;
+  color: #723f18;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
 }
 
 input {
-    font-family: 'Maharlika', sans-serif;
-    font-size: 1rem;
-    color: #723f18;
-    border: 1px solid #bf895c;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
+  font-family: "Maharlika", sans-serif;
+  font-size: 1rem;
+  color: #723f18;
+  border: 1px solid #bf895c;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+input[type="date"] {
+  color: #666;
+  font-family: "Maharlika", sans-serif;
 }
 
 button {
-    font-family: 'Maharlika', sans-serif;
-    font-size: 1rem;
-    color: #f8f3ea;
-    background-color: #bf895c;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  font-family: "Maharlika", sans-serif;
+  font-size: 1rem;
+  color: #f8f3ea;
+  background-color: #bf895c;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #a7724e;
+  background-color: #a7724e;
 }
 
-.register-text {
-    margin-top: 15px;
-    font-size: 0.9rem;
-    color: #723f18;
+.gender-label,
+.dob-label {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: #723f18;
 }
 
-.register-text a {
-    color: #723f18;
-    text-decoration: none;
-    font-weight: bold;
+.gender-selection {
+  display: flex;
+  justify-content: space-around;
 }
 
-.register-text a:hover {
-    text-decoration: underline;
+.gender-selection label {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: #723f18;
+}
+
+.gender-selection input[type="radio"] {
+  margin-right: 5px;
 }
