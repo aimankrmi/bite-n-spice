@@ -7,8 +7,10 @@
     <title>Breakfast Category Page</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Maharlika&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../../assets/css/styles.css">
-    <link rel="stylesheet" href="../../assets/css/cat-breakfast-styles.css">
+    <link rel="stylesheet" href="../../assets/css/cat-styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -70,52 +72,60 @@
 
 
     <main>
-        <section class="hero">
-            <img src="../../assets/icons/bubble.svg" alt="Bubbles" class="bubbles-image">
-            <img src="../../assets/icons/plate.svg" alt="Plate" width="80px" height="80px" class="plate-image">
-            <div class="left-side-intro">
-                <h1>Breakfast Recipes</h1>
+        <div class="container-fluid hero ">
+            <div class="row w-100 py-5 py-lg-0 d-flex justify-content-center align-items-center ">
+                <img src="../../assets/icons/bubble.svg" alt="Bubbles" class="bubbles-image">
+
+                <div class="col-auto left-side-intro">
+                    <img src="../../assets/icons/plate.svg" alt="Plate" class="plate-image">
+                    <h1 class="h1">Breakfast Recipes</h1>
+                </div>
+                <div class="col-auto right-side-intro">
+                    <p class="intro-text fs-2">
+                        Delicious ways to jump-start your day, comin' right up
+                    </p>
+                </div>
+                <img src="../../assets/icons/flower.svg" alt="Flowers" class="flowers-image">
             </div>
-            <div class="right-side-intro">
-                <p class="intro-text">
-                    Delicious ways to jump-start your day, comin' right up
-                </p>
-            </div>
-            <img src="../../assets/icons/flower.svg" alt="Flowers" class="flowers-image">
-        </section>
+        </div>
+
         <section class="search-container">
             <input type="text" placeholder="Search Recipes" class="search-bar">
             <button class="search-button">Search</button>
         </section>
-
-        <section class="recipe-container">
-            <a href="../recipe/lasagna.html">
-                <div class="recipe-card">
-                    <img src="../../assets/images/recipe/breakfast/lasagna.png" alt="Sausage Gravy Breakfast Lasagna">
-                    <p>Sausage Gravy Breakfast Lasagna</p>
+        <div class="recipe-container container-fluid">
+            <div class="row w-100 d-flex justify-content-around align-items-center">
+                <div class="col-xl-4 col-lg-4 recipe-card ">
+                    <a href="../recipe/lasagna.html">
+                        <img src="../../assets/images/recipe/breakfast/lasagna.png"
+                            alt="Sausage Gravy Breakfast Lasagna">
+                        <p>Sausage Gravy Breakfast Lasagna</p>
+                    </a>
                 </div>
-            </a>
-            <div class="recipe-card">
-                <img src="../../assets/images/recipe/breakfast/omelet.jpg" alt="Hash Brown Omelet">
-                <p>Hash Brown Omelet</p>
+                <div class="col-xl-4 col-lg-4 recipe-card">
+                    <img src="../../assets/images/recipe/breakfast/omelet.jpg" alt="Hash Brown Omelet">
+                    <p>Hash Brown Omelet</p>
+                </div>
+                <div class="col-xl-4 col-lg-4 recipe-card">
+                    <img src="../../assets/images/recipe/breakfast/oatmeal cake.png"
+                        alt="Oatmeal-Glazed Breakfast Cake">
+                    <p>Oatmeal-Glazed Breakfast Cake</p>
+                </div>
+                <div class="col-xl-4 col-lg-4 recipe-card">
+                    <img src="../../assets/images/recipe/breakfast/burito.png" alt="burito">
+                    <p>Burrito</p>
+                </div>
+                <div class="col-xl-4 col-lg-4 recipe-card">
+                    <img src="../../assets/images/recipe/breakfast/breakfast granola.png" alt="Granola Cookies">
+                    <p>Granola Cookies</p>
+                </div>
+                <div class="col-xl-4 col-lg-4 recipe-card">
+                    <img src="../../assets/images/recipe/breakfast/sausage crescent.jpg" alt="Sausage Crescent">
+                    <p>Sausage Crescent</p>
+                </div>
             </div>
-            <div class="recipe-card">
-                <img src="../../assets/images/recipe/breakfast/oatmeal cake.png" alt="Oatmeal-Glazed Breakfast Cake">
-                <p>Oatmeal-Glazed Breakfast Cake</p>
-            </div>
-            <div class="recipe-card">
-                <img src="../../assets/images/recipe/breakfast/burito.png" alt="burito">
-                <p>Burrito</p>
-            </div>
-            <div class="recipe-card">
-                <img src="../../assets/images/recipe/breakfast/breakfast granola.png" alt="Granola Cookies">
-                <p>Granola Cookies</p>
-            </div>
-            <div class="recipe-card">
-                <img src="../../assets/images/recipe/breakfast/sausage crescent.jpg" alt="Sausage Crescent">
-                <p>Sausage Crescent</p>
-            </div>
-        </section>
+        </div>
+
 
     </main>
     <footer id="footer">

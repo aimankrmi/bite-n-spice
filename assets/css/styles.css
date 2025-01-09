@@ -327,7 +327,6 @@ section.about-us .title {
 
 footer {
   background-color: var(--background);
-  width: 100vw;
   min-height: 10vh;
   padding: 20px 20px;
   display: flex;
