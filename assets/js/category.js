@@ -17,7 +17,6 @@ let filteredRecipes = [];
 
 searchInput.addEventListener("input", (e) => {
   const value = e.target.value.toLowerCase();
-  console.log(value);
 
   filteredRecipes.forEach((recipe) => {
     const isVisible = recipe.name.toLowerCase().includes(value);
