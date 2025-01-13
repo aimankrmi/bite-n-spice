@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="../../assets/js/category.js" defer></script>
 </head>
 
 <body>
@@ -90,41 +91,22 @@
         </div>
 
         <section class="search-container">
-            <input type="text" placeholder="Search Recipes" class="search-bar">
+            <input type="text" placeholder="Search Recipes" class="search-bar" recipe-search>
             <button class="search-button">Search</button>
         </section>
 
         <div class="recipe-container container-fluid">
-            <div class="row w-100 d-flex justify-content-around align-items-center">
+
+            <div class="row w-100 d-flex justify-content-around align-items-center" dinner-recipe-data-container>
+            </div>
+            <template recipe-data-template>
                 <div class="col-xl-4 col-lg-4 recipe-card ">
-                    <a href="../recipe/spaghetti.html">
-                        <img src="../../assets/images/recipe/dinner/spaghetti.jpg" alt="Spaghetti Aglio e Olio">
-                        <p>Spaghetti Aglio e Olio</p>
+                    <a recipe-url>
+                        <img recipe-img>
+                        <p recipe-name></p>
                     </a>
                 </div>
-                <div class="col-xl-4 col-lg-4 recipe-card">
-                    <img src="../../assets/images/recipe/dinner/teriyaki-chicken.jpg"
-                        alt="Teriyaki Chicken and Broccoli">
-                    <p>Teriyaki Chicken and Broccoli</p>
-                </div>
-                <div class="col-xl-4 col-lg-4 recipe-card">
-                    <img src="../../assets/images/recipe/dinner/chicken-tortilla.jpg" alt="Chicken Tortilla">
-                    <p>Chicken Tortilla</p>
-                </div>
-                <div class="col-xl-4 col-lg-4 recipe-card">
-                    <img src="../../assets/images/recipe/dinner/sate-ayam.jpg"
-                        alt="Thai Chicken Satay Skewers with Peanut Sauce">
-                    <p>Chicken Satay with Peanut Sauce</p>
-                </div>
-                <div class="col-xl-4 col-lg-4 recipe-card">
-                    <img src="../../assets/images/recipe/dinner/lamb-chops.jpg" alt="Lamb Chops with Rosemary Gravy">
-                    <p>Lamb Chops with Rosemary Gravy</p>
-                </div>
-                <div class="col-xl-4 col-lg-4 recipe-card">
-                    <img src="../../assets/images/recipe/dinner/char-kuew-teow.jpg" alt="char kuey teow">
-                    <p>Char Kuey Teow</p>
-                </div>
-            </div>
+            </template>
         </div>
 
 

@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="../../assets/js/category.js" defer></script>
 </head>
 <body>
     <header id="header">
@@ -90,43 +91,23 @@
         </div>
 
         <section class="search-container">
-            <input type="text" placeholder="Search Recipes" class="search-bar">
+            <input type="text" placeholder="Search Recipes" class="search-bar" recipe-search>
             <button class="search-button">Search</button>
         </section>
         <div class="recipe-container container-fluid">
-            <div class="row w-100 d-flex justify-content-around align-items-center">
-                <div class="col-xl-4 col-lg-4 recipe-card ">
-                    <a href="../recipe/lasagna.html">
-                        <img src="../../assets/images/recipe/breakfast/lasagna.png"
-                            alt="Sausage Gravy Breakfast Lasagna">
-                        <p>Sausage Gravy Breakfast Lasagna</p>
-                    </a>
-                </div>
-                <div class="col-xl-4 col-lg-4 recipe-card">
-                    <img src="../../assets/images/recipe/breakfast/omelet.jpg" alt="Hash Brown Omelet">
-                    <p>Hash Brown Omelet</p>
-                </div>
-                <div class="col-xl-4 col-lg-4 recipe-card">
-                    <img src="../../assets/images/recipe/breakfast/oatmeal cake.png"
-                        alt="Oatmeal-Glazed Breakfast Cake">
-                    <p>Oatmeal-Glazed Breakfast Cake</p>
-                </div>
-                <div class="col-xl-4 col-lg-4 recipe-card">
-                    <img src="../../assets/images/recipe/breakfast/burito.png" alt="burito">
-                    <p>Burrito</p>
-                </div>
-                <div class="col-xl-4 col-lg-4 recipe-card">
-                    <img src="../../assets/images/recipe/breakfast/breakfast granola.png" alt="Granola Cookies">
-                    <p>Granola Cookies</p>
-                </div>
-                <div class="col-xl-4 col-lg-4 recipe-card">
-                    <img src="../../assets/images/recipe/breakfast/sausage crescent.jpg" alt="Sausage Crescent">
-                    <p>Sausage Crescent</p>
-                </div>
+            <div class="row w-100 d-flex justify-content-around align-items-center" breakfast-recipe-data-container>
+
             </div>
         </div>
 
-
+        <template recipe-data-template>
+            <div class="col-xl-4 col-lg-4 recipe-card ">
+                <a recipe-url>
+                    <img recipe-img>
+                    <p recipe-name></p>
+                </a>
+            </div>
+        </template>
     </main>
     <footer id="footer">
         <div class="footer-top">

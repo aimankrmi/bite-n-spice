@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="../../assets/js/category.js" defer></script>
 </head>
 
 <body>
@@ -92,40 +93,20 @@
         </div>
 
         <section class="search-container">
-            <input type="text" placeholder="Search Recipes" class="search-bar">
+            <input type="text" placeholder="Search Recipes" class="search-bar" recipe-search>
             <button class="search-button">Search</button>
         </section>
         <div class="recipe-container container-fluid">
-            <div class="row w-100 d-flex justify-content-around align-items-center">
+            <div class="row w-100 d-flex justify-content-around align-items-center" dessert-recipe-data-container>
+            </div>
+            <template recipe-data-template>
                 <div class="col-xl-4 col-lg-4 recipe-card ">
-                    <a href="../recipe/banana-pudding.html">
-                        <img src="../../assets/images/recipe/dessert/banana-cream-pudding.jpg"
-                            alt="Banana cream Pudding">
-                        <p>Banana Cream Pudding</p>
+                    <a recipe-url>
+                        <img recipe-img>
+                        <p recipe-name></p>
                     </a>
                 </div>
-                <div class="col-xl-4 col-lg-4 recipe-card">
-                    <img src="../../assets/images/recipe/dessert/cookies.jpg" alt="Glazed Mocha Chocolate Chip Cookies">
-                    <p>Glazed Mocha Chocolate Chip Cookies</p>
-                </div>
-                <div class="col-xl-4 col-lg-4 recipe-card">
-                    <img src="../../assets/images/recipe/dessert/carrot-pineapple-cake.jpg"
-                        alt="Carrot and Pineapple Cake">
-                    <p>Carrot and Pineapple Cake</p>
-                </div>
-                <div class="col-xl-4 col-lg-4 recipe-card">
-                    <img src="../../assets/images/recipe/dessert/creeme-brulee-cupcake.jpg" alt="Creme brulee cupcake">
-                    <p>Crème Brûlée cupcake</p>
-                </div>
-                <div class="col-xl-4 col-lg-4 recipe-card">
-                    <img src="../../assets/images/recipe/dessert/cha-bang-ang.jpg" alt="Cha Bang Ang">
-                    <p>Cha Bang Ang</p>
-                </div>
-                <div class="col-xl-4 col-lg-4 recipe-card">
-                    <img src="../../assets/images/recipe/dessert/tiramisu-cake.jpg" alt="Tiramisu Cake">
-                    <p>Tiramisu Cake</p>
-                </div>
-            </div>
+            </template>
         </div>
     </main>
     <footer id="footer">

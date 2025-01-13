@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="../../assets/js/category.js" defer></script>
 </head>
 
 <body>
@@ -90,44 +91,20 @@
         </div>
 
         <section class="search-container">
-            <input type="text" placeholder="Search Recipes" class="search-bar">
+            <input type="text" placeholder="Search Recipes" class="search-bar" recipe-search>
             <button class="search-button">Search</button>
         </section>
         <div class="recipe-container container-fluid">
-            <div class="row w-100 d-flex justify-content-around align-items-center">
+            <div class="row w-100 d-flex justify-content-around align-items-center" lunch-recipe-data-container>
+            </div>
+            <template recipe-data-template>
                 <div class="col-xl-4 col-lg-4 recipe-card ">
-                    <a href="../recipe/lemony.html">
-                        <img class="cat-img-recipe" src="../../assets/images/recipe/lunch/lemony-chicken.jpg"
-                            alt="Lemony Chicken">
-                        <p>Lemony Chicken</p>
+                    <a recipe-url>
+                        <img recipe-img>
+                        <p recipe-name></p>
                     </a>
                 </div>
-                <div class="col-xl-4 col-lg-4 recipe-card">
-                    <img class="cat-img-recipe" src="../../assets/images/recipe/lunch/buttermilk-chicken.jpg"
-                        alt="Buttermilk Chicken">
-                    <p>Buttermilk Chicken</p>
-                </div>
-                <div class="col-xl-4 col-lg-4 recipe-card">
-                    <img class="cat-img-recipe" src="../../assets/images/recipe/lunch/steak-tacos.jpg" alt=" Chili Rubbed
-                                        Steak Tacos">
-                    <p>Chili Rubbed Steak Tacos</p>
-                </div>
-                <div class="col-xl-4 col-lg-4 recipe-card">
-                    <img class="cat-img-recipe" src="../../assets/images/recipe/lunch/laksa.jpg"
-                        alt="Laksa Noodle Soup">
-                    <p>Laksa Noodle Soup</p>
-                </div>
-                <div class="col-xl-4 col-lg-4 recipe-card">
-                    <img class="cat-img-recipe" src="../../assets/images/recipe/lunch/chicken-rice.jpg"
-                        alt="Chicken Rice">
-                    <p>Chicken Rice</p>
-                </div>
-                <div class="col-xl-4 col-lg-4 recipe-card">
-                    <img class="cat-img-recipe" src="../../assets/images/recipe/lunch/viatnamese-roll.jpg"
-                        alt="Vietnamese Roll">
-                    <p>Vietnamese Roll</p>
-                </div>
-            </div>
+            </template>
         </div>
 
     </main>

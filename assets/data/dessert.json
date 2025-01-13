@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Banana Cream Pudding",
+    "imgUrl": "../../assets/images/recipe/dessert/banana-cream-pudding.jpg",
+    "url": "../recipe/banana-pudding.html",
+    "imgAlt": "Banana Cream Pudding"
+  },
+  {
+    "name": "Glazed Mocha Chocolate Chip Cookies",
+    "imgUrl": "../../assets/images/recipe/dessert/cookies.jpg",
+    "url": "#",
+    "imgAlt": "Glazed Mocha Chocolate Chip Cookies"
+  },
+  {
+    "name": "Carrot and Pineapple Cake",
+    "imgUrl": "../../assets/images/recipe/dessert/carrot-pineapple-cake.jpg",
+    "url": "#",
+    "imgAlt": "Carrot and Pineapple Cake"
+  },
+  {
+    "name": "Crème Brûlée cupcake",
+    "imgUrl": "../../assets/images/recipe/dessert/creeme-brulee-cupcake.jpg",
+    "url": "#",
+    "imgAlt": "Crème Brûlée cupcake"
+  },
+  {
+    "name": "Cha Bang Ang",
+    "imgUrl": "../../assets/images/recipe/dessert/cha-bang-ang.jpg",
+    "url": "#",
+    "imgAlt": "Cha Bang Ang"
+  },
+  {
+    "name": "Tiramisu Cake",
+    "imgUrl": "../../assets/images/recipe/dessert/tiramisu-cake.jpg",
+    "url": "#",
+    "imgAlt": "Tiramisu Cake"
+  }
+]
