@@ -1,0 +1,326 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Playfair Display", serif;
+  background-color: #f8f3ea;
+}
+
+#img-bg {
+  background-image: url("FoodImage.jpg");
+  /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  /* Ensure full height */
+}
+
+.food-image {
+  width: 50%;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  transition: transform 1s ease;
+}
+
+.moved {
+  transform: translateX(100%);
+  /* Moves the image to the right */
+}
+
+.moved-back {
+  transform: translateX(0);
+  /* Moves the image to the left */
+}
+
+.main-container {
+  height: 100vh;
+}
+
+.sign-in-up-container,
+.sign-up-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.sign-in-up-container h1,
+.sign-up-container h1 {
+  color: #723f18;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.sign-in-up-container p,
+.sign-up-container p {
+  color: #723f18;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.sign-in-up-container form,
+.sign-up-container form {
+  width: 80%;
+  max-width: 400px;
+}
+
+.sign-in-up-container input,
+.sign-up-container input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #bf895c;
+  border-radius: 5px;
+}
+
+.sign-in-up-container button,
+.sign-up-container button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #bf895c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sign-in-up-container button:hover,
+.sign-up-container button:hover {
+  background-color: #a7724e;
+}
+
+/*Sign in Page*/
+#sign-in-heading h1 {
+  font-size: 2.5rem;
+  color: #723f18;
+  margin-bottom: 10px;
+}
+
+
+/* Style for the welcome text*/
+#sign-in-heading .welcome-text {
+  font-size: 1rem;
+  color: #723f18;
+  margin-bottom: 10px;
+}
+
+
+/* Login and Register Button Styles*/
+#sign-in-heading .btn-primary {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Login Button*/
+#sign-in-heading .btn-primary {
+  background-color: #bf895c;
+  color: white;
+  border: none;
+}
+
+#sign-in-heading .btn-primary:hover {
+  background-color: #a7724e;
+  transform: translateY(-2px);
+}
+
+
+/* Form Input Styles*/
+#sign-in-heading .form-control {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #DADADA;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+#sign-in-heading .form-control:focus {
+  border-color: #a7724e;
+  box-shadow: 0 0 1px rgb(161, 106, 71);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+/*Don't Have an account part*/
+.register-text {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #723f18;
+}
+
+.register-text a {
+  color: #723f18;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-text a:hover {
+  text-decoration: underline;
+}
+
+/*Decorative Elements*/
+/* Base styles for the decorative elements */
+.flower {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  background-image: url('../icons/flower.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.leaf {
+  position: absolute;
+  bottom: 0;
+  left: 80px;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 180px;
+  background-image: url('../icons/weed.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.bubble-top {
+  position: absolute;
+  top: 0;
+  left: 700px;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 180px;
+  background-image: url('../icons/bubble.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.bubble-bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 630px;
+  width: 180px;
+  height: 180px;
+  background-image: url('../icons/bubble2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .flower {
+    width: 150px;
+    height: 150px;
+  }
+
+  .leaf {
+    width: 150px;
+    height: 150px;
+    left: 50px;
+  }
+
+  .bubble-top {
+    width: 150px;
+    height: 150px;
+    left: 600px;
+  }
+
+  .bubble-bottom-right {
+    width: 150px;
+    height: 150px;
+    right: 550px;
+  }
+}
+
+@media (max-width: 992px) {
+  .flower {
+    width: 120px;
+    height: 120px;
+  }
+
+  .leaf {
+    width: 120px;
+    height: 120px;
+    left: 40px;
+  }
+
+  .bubble-top {
+    width: 120px;
+    height: 120px;
+    left: 430px;
+  }
+
+  .bubble-bottom-right {
+    width: 120px;
+    height: 120px;
+    right: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .flower {
+    width: 100px;
+    height: 100px;
+  }
+
+  .leaf {
+    width: 100px;
+    height: 100px;
+    left: 30px;
+  }
+
+  .bubble-top {
+    width: 100px;
+    height: 100px;
+    left: 400px;
+  }
+
+  .bubble-bottom-right {
+    width: 100px;
+    height: 100px;
+    right: 350px;
+  }
+}
+
+@media (max-width: 576px) {
+  .flower {
+    width: 80px;
+    height: 80px;
+  }
+
+  .leaf {
+    width: 80px;
+    height: 80px;
+    left: 20px;
+  }
+
+  .bubble-top {
+    width: 80px;
+    height: 80px;
+    left: 300px;
+  }
+
+  .bubble-bottom-right {
+    width: 80px;
+    height: 80px;
+    right: 250px;
+  }
+}
