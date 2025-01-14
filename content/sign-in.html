@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In Page</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/icons/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
@@ -20,9 +20,9 @@
     <div class="container-fluid sign-in-up ">
         <img src="../assets/images/FoodImage.jpg" alt="Food Image" class="food-image" id="food-image">
         <div class="row main-container">
-            <div class="col-6 sign-up-container d-flex align-items-center justify-content-center flex-column p-3">
+            <div class="col-6 sign-up-container d-flex align-items-center justify-content-center flex-column p-1">
                 <h1>Create Account</h1>
-                <p class="welcome-text">Fill in the details below</p>
+                <p class="welcome-text fs-5">Fill in the details below</p>
                 <form id="register-form">
                     <input name="uname" id="uname" type="text" placeholder="Username">
                     <input name="email" id="email" type="email" placeholder="Email Address">
@@ -39,43 +39,49 @@
                         </label>
                     </div>
                     <button id="sign-up-btn" type="submit" class="btn btn-primary">Join Now</button>
+                    <p class="login-text text-center">Already
+                        Have an account? <button id="btn-go-to-login" class="btn btn-secondary">Log in now!</button>
+                    </p>
                 </form>
             </div>
             <div id="sign-in-container"
-                class="col-6 sign-in-container d-flex align-items-center justify-content-center flex-column p-3">
-                <h1>Let's sign you in.</h1>
-                <p class="welcome-text">Hello, welcome back to your account</p>
-                <form id="login-form" action="#">
-                    <div class="mb-3 mt-3">
-                        <label for="login-email" class="form-label">Email:</label>
-                        <input type="email" class="form-control" id="login-email" placeholder="Enter email"
-                            name="email">
-                    </div>
-                    <div class="mb-3">
-                        <label for="login-password" class="form-label">Password:</label>
-                        <input type="password" class="form-control" id="login-password" placeholder="Enter password"
-                            name="pswd">
-                    </div>
-                    <button id="btn-login" type="submit" class="btn btn-primary">Login</button>
-                </form>
-                <p class="register-text">Don't have an account? <button id="btn-register"
-                        class="btn btn-secondary">Register</button>
-                </p>
+                class="col-6 sign-in-container d-flex align-items-center justify-content-center flex-column ">
+                <div id="sign-in-form" class="sign-in-form">
+
+                    <h1 class="fs-1">Let's sign you in.</h1>
+                    <p class="welcome-text fs-4">Hello, welcome back to your account</p>
+                    <form id="login-form" action="#">
+                        <div class="mb-3 mt-3">
+                            <label for="login-email" class="form-label">Email:</label>
+                            <input type="email" class="form-control" id="login-email" placeholder="Enter email"
+                                name="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="login-password" class="form-label">Password:</label>
+                            <input type="password" class="form-control" id="login-password" placeholder="Enter password"
+                                name="pswd">
+                        </div>
+                        <button id="btn-login" type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                    <p class="register-text">Don't have an account? <button id="btn-register"
+                            class="btn btn-secondary">Register</button>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
 
 
 
-    <script src="../assets/js/signin-script.js">
 
-    </script>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
+    <script src="../assets/js/signin-script.js"></script>
 </body>
 
 </html>

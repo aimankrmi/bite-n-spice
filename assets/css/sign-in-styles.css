@@ -9,27 +9,14 @@ body {
   background-color: #f8f3ea;
 }
 
-#img-bg {
-  background-image: url("FoodImage.jpg"); /* Replace with your image */
-  background-size: cover;
-  background-position: center;
-  height: 100vh; /* Ensure full height */
-}
 .food-image {
+  z-index: 100;
   width: 50%;
   height: 100vh;
   object-fit: cover;
   position: absolute;
   left: 0;
   transition: transform 1s ease;
-}
-
-.moved {
-  transform: translateX(100%); /* Moves the image to the right */
-}
-
-.moved-back {
-  transform: translateX(0); /* Moves the image to the left */
 }
 
 .main-container {
@@ -45,6 +32,7 @@ body {
 .sign-up-container h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .sign-in-up-container p,
@@ -82,4 +70,75 @@ body {
 .sign-in-up-container button:hover,
 .sign-up-container button:hover {
   background-color: #0056b3;
+}
+.gender-selection {
+  display: flex;
+  gap: 1rem; /* Adds space between the radio buttons */
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.gender-selection label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Adds space between the radio button and its label */
+  font-size: 1rem; /* Adjust text size for readability */
+  cursor: pointer; /* Changes the cursor to pointer when hovering */
+}
+
+.gender-selection input[type="radio"] {
+  accent-color: #007bff; /* Customize the radio button color */
+  width: 1.2rem; /* Slightly larger for easier interaction */
+  height: 1.2rem;
+}
+.login-text {
+  margin-top: 1rem; /* Adds space above the text */
+  font-size: 1rem;
+  text-align: center;
+}
+
+.login-text button {
+  background-color: #6c757d; /* Secondary button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-text button:hover {
+  background-color: #5a6268; /* Darker shade on hover */
+}
+@media only screen and (max-width: 768px) {
+  .sign-in-container {
+    /* visibility: hidden; */
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    border: 1px solid black;
+    background-image: url(../images/FoodImage.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 1s ease;
+  }
+
+  .sign-in-form {
+    padding: 30px;
+    border-radius: 10px;
+    background: #f8f3ea;
+  }
+
+  .food-image {
+    display: none;
+  }
+
+  .sign-up-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
