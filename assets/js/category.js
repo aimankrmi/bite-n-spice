@@ -84,37 +84,37 @@ const lunchData = [
   {
     name: "Lemony Chicken",
     imgUrl: "../../assets/images/recipe/lunch/lemony-chicken.jpg",
-    url: "../recipe/banana-pudding.html",
+    url: "../recipe/lemony.html",
     imgAlt: "Lemony Chicken",
   },
   {
     name: "Buttermilk Chicken",
     imgUrl: "../../assets/images/recipe/lunch/buttermilk-chicken.jpg",
-    url: "../recipe/banana-pudding.html",
+    url: "#",
     imgAlt: "Buttermilk Chicken",
   },
   {
     name: "Chili Rubbed Steak Tacos",
     imgUrl: "../../assets/images/recipe/lunch/steak-tacos.jpg",
-    url: "../recipe/banana-pudding.html",
+    url: "#",
     imgAlt: "Chili Rubbed Steak Tacos",
   },
   {
     name: "Laksa Noodle Soup",
     imgUrl: "../../assets/images/recipe/lunch/laksa.jpg",
-    url: "../recipe/banana-pudding.html",
+    url: "#",
     imgAlt: "Laksa Noodle Soup",
   },
   {
     name: "Chicken Rice",
     imgUrl: "../../assets/images/recipe/lunch/chicken-rice.jpg",
-    url: "../recipe/banana-pudding.html",
+    url: "#",
     imgAlt: "Chicken Rice",
   },
   {
     name: "Vietnamese Roll",
     imgUrl: "../../assets/images/recipe/lunch/viatnamese-roll.jpg",
-    url: "../recipe/banana-pudding.html",
+    url: "#",
     imgAlt: "Vietnamese Roll",
   },
 ];
