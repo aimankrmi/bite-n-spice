@@ -1,18 +1,18 @@
-const reviewButton = document.querySelector("[review-submit-btn]");
-const reviewInput = document.querySelector("[review-input]");
+const reviewButton = document.querySelector("[data-review-submit-btn]");
+const reviewInput = document.querySelector("[data-review-input]");
 let recipe = "";
-const reviewTemplate = document.querySelector("[user-review-template]");
+const reviewTemplate = document.querySelector("[data-user-review-template]");
 const lasagnaReviewContainer = document.querySelector(
-  "[lasagna-review-container]"
+  "[data-lasagna-review-container]"
 );
 const puddingReviewContainer = document.querySelector(
-  "[pudding-review-container]"
+  "[data-pudding-review-container]"
 );
 const lemonyReviewContainer = document.querySelector(
-  "[lemony-review-container]"
+  "[data-lemony-review-container]"
 );
 const spaghettiReviewContainer = document.querySelector(
-  "[spaghetti-review-container]"
+  "[data-spaghetti-review-container]"
 );
 if (lasagnaReviewContainer) {
   recipe = "lasagna";
@@ -29,8 +29,8 @@ let comment = "";
 document.addEventListener("DOMContentLoaded", function () {
   const reviewButton = document.getElementById("review-submit-btn");
 
-  const reviewTemplate = document.querySelector("[user-review-template]");
-  const reviewInput = document.querySelector("[review-input]");
+  const reviewTemplate = document.querySelector("[data-user-review-template]");
+  const reviewInput = document.querySelector("[data-review-input]");
 
   // Load reviews from local storage
   loadReviews();
@@ -42,8 +42,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (comment.trim() === "") return;
 
     const review = reviewTemplate.content.cloneNode(true).children[0];
-    const reviewName = review.querySelector("[user-name]");
-    const reviewComment = review.querySelector("[user-review]");
+    const reviewName = review.querySelector("[data-user-name]");
+    const reviewComment = review.querySelector("[data-user-review]");
 
     const user = JSON.parse(localStorage.getItem("currentUser"))
       ? JSON.parse(localStorage.getItem("currentUser")).username
@@ -68,8 +68,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const reviews = JSON.parse(localStorage.getItem(`${recipe}_reviews`)) || [];
     reviews.forEach(({ name, comment }) => {
       const review = reviewTemplate.content.cloneNode(true).children[0];
-      const reviewName = review.querySelector("[user-name]");
-      const reviewComment = review.querySelector("[user-review]");
+      const reviewName = review.querySelector("[data-user-name]");
+      const reviewComment = review.querySelector("[data-user-review]");
 
       reviewName.textContent = name;
       reviewComment.textContent = comment;

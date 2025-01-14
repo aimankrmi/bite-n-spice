@@ -18,15 +18,15 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <script src="../../assets/js/category.js" defer></script>
 
 </head>
 <body>
     <header id="header">
         <div class="left-side-header">
-            <a href="../../index.html"><img src="../../assets/icons/logo.svg" alt="Logo Bite & Spice" width="90px"
-                    height="90px" class="logo"></a>
+            <a href="../../index.html"><img src="../../assets/icons/logo.svg" alt="Logo Bite & Spice" width="90"
+                    height="90" class="logo"></a>
         </div>
         <div class="right-side-header">
             <button class="toggler" id="toggler">
@@ -92,27 +92,27 @@
         </div>
 
         <section class="search-container">
-            <input type="text" placeholder="Search Recipes" class="search-bar" recipe-search>
+            <input type="text" placeholder="Search Recipes" class="search-bar" data-recipe-search>
             <button class="search-button">Search</button>
         </section>
         <div class="recipe-container container-fluid">
-            <div class="row w-100 d-flex justify-content-around align-items-center" breakfast-recipe-data-container>
+            <div class="row w-100 d-flex justify-content-around align-items-center" data-breakfast-recipe-container>
 
             </div>
         </div>
 
-        <template recipe-data-template>
+        <template data-recipe-template>
             <div class="col-xl-4 col-lg-4 recipe-card ">
-                <a recipe-url>
-                    <img recipe-img>
-                    <p recipe-name></p>
+                <a data-recipe-url>
+                    <img data-recipe-img>
+                    <p data-recipe-name></p>
                 </a>
             </div>
         </template>
     </main>
     <footer id="footer">
         <div class="footer-top">
-            <img src="../../assets/icons/weed.svg" id="weed">
+            <img src="../../assets/icons/weed.svg" class="weed" alt="weed">
             <div class="footer-text">
                 <p>GET IN TOUCH WITH US!</p>
             </div>
@@ -121,19 +121,19 @@
                     <li>
                         <a href="https://maps.app.goo.gl/ZmXpuVp5kuXqnaeaA">
                             <img class="footer-link" src="../../assets/icons/location.svg" alt="location icon"
-                                width="30px" height="30px">
+                                width="30" height="30">
                             <span>SINI SANA STREET</span>
                         </a>
                     </li>
                     <li>
                         <a href="https://api.whatsapp.com/send?phone=60123456789"><img class="footer-link"
-                                src="../../assets/icons/contact.svg" alt="contact icon" width="30px" height="30px">
+                                src="../../assets/icons/contact.svg" alt="contact icon" width="30" height="30">
                             <span>012-345 6789</span></a>
                     </li>
                     <li>
                         <a href="mailto:bitenspice@gmail.com">
-                            <img class="footer-link" src="../../assets/icons/email.svg" alt="email icon" width="30px"
-                                height="30px">
+                            <img class="footer-link" src="../../assets/icons/email.svg" alt="email icon" width="30"
+                                height="30">
                             <span>bitenspice@gmail.com</span></a>
                     </li>
                 </ul>

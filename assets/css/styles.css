@@ -48,7 +48,10 @@ hr {
 .container-fluid {
   background-color: var(--background);
 }
-
+.user-icon {
+  font-size: 3rem; /* Adjust the size as needed */
+  color: var(--dark-brown-background);
+}
 #header {
   position: sticky;
   top: 0;
@@ -570,7 +573,8 @@ footer {
     text-align: center;
   }
 }
-#weed {
+.weed,
+.floating-weed {
   position: absolute;
   left: -40px;
   width: 150px;

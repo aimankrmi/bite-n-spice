@@ -9,6 +9,15 @@ body {
   color: #723f18;
 }
 
+::placeholder {
+  color: var(--dark-brown-title);
+  font-family: "Sour Gummy", cursive, sans-serif;
+}
+
+.search-bar {
+  color: var(--dark-brown-title);
+}
+
 /* Hero section where the Category title is */
 .hero {
   display: flex;

@@ -159,20 +159,20 @@ const dinnerData = [
   },
 ];
 
-const recipeTemplate = document.querySelector("[recipe-data-template]");
+const recipeTemplate = document.querySelector("[data-recipe-template]");
 const breakfastRecipeContainer = document.querySelector(
-  "[breakfast-recipe-data-container]"
+  "[data-breakfast-recipe-container]"
 );
 const dessertRecipeContainer = document.querySelector(
-  "[dessert-recipe-data-container]"
+  "[data-dessert-recipe-container]"
 );
 const dinnerRecipeContainer = document.querySelector(
-  "[dinner-recipe-data-container]"
+  "[data-dinner-recipe-container]"
 );
 const lunchRecipeContainer = document.querySelector(
-  "[lunch-recipe-data-container]"
+  "[data-lunch-recipe-container]"
 );
-const searchInput = document.querySelector("[recipe-search]");
+const searchInput = document.querySelector("[data-recipe-search]");
 
 let filteredRecipes = [];
 
@@ -189,9 +189,9 @@ searchInput.addEventListener("input", (e) => {
 if (breakfastRecipeContainer) {
   filteredRecipes = breakfastData.map((recipe) => {
     const cardRecipe = recipeTemplate.content.cloneNode(true).children[0];
-    const recipeUrl = cardRecipe.querySelector("[recipe-url]");
-    const recipeImage = cardRecipe.querySelector("[recipe-img]");
-    const recipeName = cardRecipe.querySelector("[recipe-name]");
+    const recipeUrl = cardRecipe.querySelector("[data-recipe-url]");
+    const recipeImage = cardRecipe.querySelector("[data-recipe-img]");
+    const recipeName = cardRecipe.querySelector("[data-recipe-name]");
     recipeUrl.href = recipe.url;
     recipeName.textContent = recipe.name;
     recipeImage.src = recipe.imgUrl;
@@ -206,9 +206,9 @@ if (breakfastRecipeContainer) {
   filteredRecipes = dessertData.map((recipe) => {
     const cardRecipe = recipeTemplate.content.cloneNode(true).children[0];
 
-    const recipeUrl = cardRecipe.querySelector("[recipe-url]");
-    const recipeImage = cardRecipe.querySelector("[recipe-img]");
-    const recipeName = cardRecipe.querySelector("[recipe-name]");
+    const recipeUrl = cardRecipe.querySelector("[data-recipe-url]");
+    const recipeImage = cardRecipe.querySelector("[data-recipe-img]");
+    const recipeName = cardRecipe.querySelector("[data-recipe-name]");
 
     recipeUrl.href = recipe.url;
     recipeName.textContent = recipe.name;
@@ -226,9 +226,9 @@ if (breakfastRecipeContainer) {
   filteredRecipes = lunchData.map((recipe) => {
     const cardRecipe = recipeTemplate.content.cloneNode(true).children[0];
 
-    const recipeUrl = cardRecipe.querySelector("[recipe-url]");
-    const recipeImage = cardRecipe.querySelector("[recipe-img]");
-    const recipeName = cardRecipe.querySelector("[recipe-name]");
+    const recipeUrl = cardRecipe.querySelector("[data-recipe-url]");
+    const recipeImage = cardRecipe.querySelector("[data-recipe-img]");
+    const recipeName = cardRecipe.querySelector("[data-recipe-name]");
 
     recipeUrl.href = recipe.url;
     recipeName.textContent = recipe.name;
@@ -246,9 +246,10 @@ if (breakfastRecipeContainer) {
   filteredRecipes = dinnerData.map((recipe) => {
     const cardRecipe = recipeTemplate.content.cloneNode(true).children[0];
 
-    const recipeUrl = cardRecipe.querySelector("[recipe-url]");
-    const recipeImage = cardRecipe.querySelector("[recipe-img]");
-    const recipeName = cardRecipe.querySelector("[recipe-name]");
+    const recipeUrl = cardRecipe.querySelector("[data-recipe-url]");
+    const recipeImage = cardRecipe.querySelector("[data-recipe-img]");
+    const recipeName = cardRecipe.querySelector("[data-recipe-name]");
+    console.log(recipe);
 
     recipeUrl.href = recipe.url;
     recipeName.textContent = recipe.name;

@@ -142,3 +142,83 @@ body {
     align-items: center;
   }
 }
+
+/*Decorative Elements*/
+/* Base styles for the decorative elements */
+.flower {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  background-image: url("../icons/flower.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.leaf {
+  position: absolute;
+  bottom: 0;
+  left: 80px;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 180px;
+  background-image: url("../icons/weed.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .flower {
+    width: 150px;
+    height: 150px;
+  }
+
+  .leaf {
+    width: 150px;
+    height: 150px;
+    left: 50px;
+  }
+}
+
+@media (max-width: 992px) {
+  .flower {
+    width: 120px;
+    height: 120px;
+  }
+
+  .leaf {
+    width: 120px;
+    height: 120px;
+    left: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .flower {
+    width: 100px;
+    height: 100px;
+  }
+
+  .leaf {
+    width: 100px;
+    height: 100px;
+    left: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .flower {
+    width: 80px;
+    height: 80px;
+  }
+
+  .leaf {
+    width: 80px;
+    height: 80px;
+    left: 20px;
+  }
+}
