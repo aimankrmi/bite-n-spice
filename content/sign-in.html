@@ -23,7 +23,7 @@
             <div class="col-6 sign-up-container d-flex align-items-center justify-content-center flex-column p-1">
                 <h1>Create Account</h1>
                 <p class="welcome-text fs-5">Fill in the details below</p>
-                <form id="register-form">
+                <form id="register-form" action="#">
                     <input name="uname" id="uname" type="text" placeholder="Username">
                     <input name="email" id="email" type="email" placeholder="Email Address">
                     <input name="pswd" id="pswd" type="password" placeholder="Password">
@@ -52,9 +52,9 @@
                     <p class="welcome-text fs-4">Hello, welcome back to your account</p>
                     <form id="login-form" action="#">
                         <div class="mb-3 mt-3">
-                            <label for="login-email" class="form-label">Email:</label>
-                            <input type="email" class="form-control" id="login-email" placeholder="Enter email"
-                                name="email">
+                            <label for="login-username" class="form-label">Username:</label>
+                            <input type="text" class="form-control" id="login-username" placeholder="Enter username"
+                                name="login-username">
                         </div>
                         <div class="mb-3">
                             <label for="login-password" class="form-label">Password:</label>

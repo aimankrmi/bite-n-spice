@@ -12,6 +12,7 @@ document
     }
     updateView();
   });
+
 let currentView = "signin"; // Default to signup view
 
 // Handle "Sign-Up" button click
@@ -24,11 +25,39 @@ document
     const email = document.forms["register-form"]["email"].value;
     const password = document.forms["register-form"]["pswd"].value;
     const dob = document.forms["register-form"]["dob"].value;
+    const gender = document.querySelector('input[name="gender"]:checked').value;
 
     if (uname === "" || email === "" || password === "" || dob === "") {
       alert("Please fill in all fields");
       return false;
     } else {
+      // Retrieve existing users from local storage
+      const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
+
+      // Check for duplicate username or email
+      const isDuplicate = existingUsers.some(
+        (user) => user.username === uname || user.email === email
+      );
+
+      if (isDuplicate) {
+        alert(
+          "Username or email already exists. Please choose a different one."
+        );
+        return;
+      }
+
+      const userDetails = {
+        username: uname,
+        email: email,
+        password: password,
+        dob: dob,
+        gender: gender,
+      };
+
+      // Save user details to local storage
+      existingUsers.push(userDetails);
+      localStorage.setItem("users", JSON.stringify(existingUsers));
+
       alert("Account created successfully");
       document.forms["register-form"].reset();
       currentView = "signin"; // Switch to sign-in view
@@ -51,15 +80,29 @@ document
   .addEventListener("click", function (event) {
     event.preventDefault();
 
-    const email = document.forms["login-form"]["login-email"].value;
+    const uname = document.forms["login-form"]["login-username"].value;
     const password = document.forms["login-form"]["login-password"].value;
 
-    if (email === "" || password === "") {
+    if (uname === "" || password === "") {
       alert("Please fill in all fields");
       return false;
     } else {
-      alert("Login successful");
-      window.location.href = "../index.html";
+      // Retrieve existing users from local storage
+      const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
+
+      // Check if the username and password match
+      const user = existingUsers.find(
+        (user) => user.username === uname && user.password === password
+      );
+
+      if (user) {
+        // Set current user in local storage
+        localStorage.setItem("currentUser", JSON.stringify(user));
+        alert("Login successful");
+        window.location.href = "../index.html";
+      } else {
+        alert("Invalid username or password");
+      }
     }
   });
 
@@ -73,14 +116,14 @@ function updateView() {
     // Mobile view adjustments
     if (currentView === "signin") {
       signInContainer.style.transform = "translateY(0)";
-      signUpContainer.style.transform = "translateY(100%)";
-      signInContainer.style.display = "flex"; // Ensure visibility
-      signUpContainer.style.display = "flex"; // Ensure visibility for smooth transition
+      signUpContainer.style.transform = "translateY(-100%)";
+      signUpContainer.style.display = "none";
+      signInContainer.style.display = "flex";
     } else {
       signInContainer.style.transform = "translateY(-100%)";
       signUpContainer.style.transform = "translateY(0)";
-      signInContainer.style.display = "flex"; // Ensure visibility
-      signUpContainer.style.display = "flex"; // Ensure visibility for smooth transition
+      signInContainer.style.display = "none";
+      signUpContainer.style.display = "flex";
     }
   } else {
     signInContainer.style.transform = "translateY(0)";
@@ -89,7 +132,6 @@ function updateView() {
     // Desktop view adjustments
     if (currentView === "signin") {
       imgBg.style.transform = "translateX(0)";
-
       signInContainer.style.display = "flex";
       signUpContainer.style.display = "none";
     } else {
