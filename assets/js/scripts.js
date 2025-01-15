@@ -42,4 +42,12 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
+
+  const subscribeForm = document.getElementById("subscribe-form");
+
+  subscribeForm.addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent the default form submission
+    alert("Thanks for subscribing us!");
+    subscribeForm.reset(); // Optional: Reset the form fields
+  });
 });
