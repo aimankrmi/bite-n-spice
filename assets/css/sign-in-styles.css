@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: "Sour Gummy", cursive, sans-serif;
+  font-family: "Playfair Display", serif;
   background-color: #f8f3ea;
 }
 
@@ -30,13 +30,16 @@ body {
 
 .sign-in-up-container h1,
 .sign-up-container h1 {
+  color: #723f18;
   font-size: 2.5rem;
   margin-bottom: 1rem;
   text-align: center;
+  font-weight: bold;
 }
 
 .sign-in-up-container p,
 .sign-up-container p {
+  color: #723f18;
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
@@ -52,7 +55,7 @@ body {
   width: 100%;
   padding: 0.75rem;
   margin-bottom: 1rem;
-  border: 1px solid #ccc;
+  border: 1px solid #bf895c;
   border-radius: 5px;
 }
 
@@ -60,7 +63,7 @@ body {
 .sign-up-container button {
   width: 100%;
   padding: 0.75rem;
-  background-color: #007bff;
+  background-color: #bf895c;
   color: white;
   border: none;
   border-radius: 5px;
@@ -69,7 +72,7 @@ body {
 
 .sign-in-up-container button:hover,
 .sign-up-container button:hover {
-  background-color: #0056b3;
+  background-color: #a7724e;
 }
 .gender-selection {
   display: flex;
@@ -87,7 +90,7 @@ body {
 }
 
 .gender-selection input[type="radio"] {
-  accent-color: #007bff; /* Customize the radio button color */
+  accent-color: #a7724e; /* Customize the radio button color */
   width: 1.2rem; /* Slightly larger for easier interaction */
   height: 1.2rem;
 }
@@ -98,7 +101,7 @@ body {
 }
 
 .login-text button {
-  background-color: #6c757d; /* Secondary button color */
+  background-color: #a6a6a6; /* Secondary button color */
   color: white;
   border: none;
   border-radius: 5px;
@@ -108,7 +111,78 @@ body {
 }
 
 .login-text button:hover {
-  background-color: #5a6268; /* Darker shade on hover */
+  background-color: #8f8f8f; /* Darker shade on hover */
+}
+/* Sign in Page*/
+#sign-in-container h1 {
+  font-size: 2.5rem;
+  color: #723f18;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Style for the welcome text*/
+#sign-in-container .welcome-text {
+  font-size: 1rem;
+  color: #723f18;
+  margin-bottom: 10px;
+}
+
+/* Login and Register Button Styles*/
+#sign-in-container .btn-primary {
+  width: 20%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Login Button*/
+#sign-in-container .btn-primary {
+  background-color: #bf895c;
+  color: white;
+  border: none;
+}
+
+#sign-in-container .btn-primary:hover {
+  background-color: #a7724e;
+  transform: translateY(-2px);
+}
+
+/* Form Input Styles*/
+#sign-in-container .form-control {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #dadada;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+#sign-in-container .form-control:focus {
+  border-color: #a7724e;
+  box-shadow: 0 0 1px rgb(161, 106, 71);
+}
+
+/* Don't Have an account part */
+/* Base style for the register button */
+#btn-register {
+  background-color: #a6a6a6;
+  /* Initial gray color */
+  color: white;
+  /* White text */
+  border: none;
+  /* No border */
+  border-radius: 5px;
+  /* Rounded corners */
+  cursor: pointer;
+  /* Pointer cursor */
+  transition: background-color 0.3s ease;
+  /* Smooth color transition */
+}
+
+#btn-register:hover {
+  background-color: #8f8f8f;
 }
 @media only screen and (max-width: 768px) {
   .sign-in-container {
