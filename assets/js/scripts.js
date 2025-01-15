@@ -25,3 +25,21 @@ function changeHeaderBackground() {
     changeHeaderBackground();
   }, 1500);
 }
+document.addEventListener("DOMContentLoaded", function () {
+  const signInLink = document.getElementById("sign-in-link");
+
+  signInLink.addEventListener("click", function (event) {
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    if (currentUser) {
+      event.preventDefault(); // Prevent the default link behavior
+      const stayLoggedIn = confirm(
+        "You are already logged in. Do you want to log out?"
+      );
+      if (stayLoggedIn) {
+        // User chose to log out
+        localStorage.removeItem("currentUser");
+        alert("You have been logged out.");
+      }
+    }
+  });
+});
