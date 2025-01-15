@@ -16,7 +16,6 @@ The purpose of this website is to provide an organized platform for recipe enthu
 HTML: Structure of the website.
 CSS: External stylesheet for design and layout.
 JavaScript: For interactive features (e.g., form validation, dynamic elements).
-Free Form Processing Service: Used for handling email submissions.
 
 **How to Use**
 Navigate through the recipe categories for meal ideas.
