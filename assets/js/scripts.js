@@ -33,12 +33,12 @@ document.addEventListener("DOMContentLoaded", function () {
     if (currentUser) {
       event.preventDefault(); // Prevent the default link behavior
       const stayLoggedIn = confirm(
-        "You are already logged in. Do you want to log out?"
+        `Dear ${currentUser.username}, you are already logged in now. Do you want to log out?`
       );
       if (stayLoggedIn) {
         // User chose to log out
         localStorage.removeItem("currentUser");
-        alert("You have been logged out.");
+        alert("You have been logged out. Thanks for visiting our site!");
       }
     }
   });
